@@ -7,8 +7,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "source map",
+    "source-map",
+    "unpack source maps",
+    "recreate source maps",
+    "source map to original structure"
+  ],
+  "author": "Anthony Ou",
+  "license": "MIT",
   "dependencies": {
     "commander": "2.19.0",
     "fs-extra": "7.0.1"
