@@ -1,0 +1,16 @@
+{
+  "name": "unpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "unmap.js",
+  "bin": "unmap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "2.19.0",
+    "fs-extra": "7.0.1"
+  }
+}
