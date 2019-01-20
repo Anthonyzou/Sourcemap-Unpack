@@ -1,5 +1,5 @@
 {
-  "name": "unpack",
+  "name": "source-map-unpacker",
   "version": "1.0.0",
   "description": "",
   "main": "unmap.js",
