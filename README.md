@@ -1,4 +1,8 @@
-# source map file unpacker
+# Source map file unpacker
+
+Install by running `npm i -g source-map-unpacker`
+
+# Usage
 
 ```
 Usage: unpack [options]

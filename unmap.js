@@ -3,11 +3,12 @@
 const fs = require('fs-extra');
 const { resolve } = require('path');
 const program = require('commander');
-program.option('-p, --path <p>', 'input map file');
-program.option('-f, --filter <f>', 'filter');
-program.option('-o, --output <o>', 'output folder').parse(process.argv);
+program
+  .option('-p, --path <p>', 'input map file')
+  .option('-f, --filter <f>', 'filter')
+  .option('-o, --output <o>', 'output folder', './')
+  .parse(process.argv);
 
-console.log(program.path);
 fs.readFile(program.path)
   .then(js => {
     js = JSON.parse(js.toString());
@@ -21,4 +22,4 @@ fs.readFile(program.path)
       );
     return Promise.all(files);
   })
-  .then(console.log);
+  .then(() => console.log(`${program.path} unpacked`));
