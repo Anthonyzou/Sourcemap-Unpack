@@ -21,7 +21,7 @@
   "author": "Anthony Ou",
   "license": "MIT",
   "dependencies": {
-    "commander": "2.19.0",
-    "fs-extra": "7.0.1"
+    "commander": "2.20.0",
+    "fs-extra": "8.0.1"
   }
 }
