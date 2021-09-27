@@ -1,6 +1,6 @@
 {
   "name": "source-map-unpacker",
-  "version": "1.2.0",
+  "version": "1.5.0",
   "description": "",
   "main": "unmap.js",
   "bin": "unmap.js",
@@ -21,11 +21,11 @@
   "author": "Anthony Ou",
   "license": "MIT",
   "dependencies": {
-    "commander": "2.20.0",
-    "fs-extra": "8.0.1"
+    "commander": "8.2.0",
+    "fs-extra": "10.0.0"
   },
   "devDependencies": {
     "@types/commander": "^2.12.2",
-    "@types/fs-extra": "^7.0.0"
+    "@types/fs-extra": "^9.0.13"
   }
 }
