@@ -6,7 +6,7 @@ Install by running `npm i -g source-map-unpacker`
 # Usage
 
 ```
-Usage: source-map-unpacker [options]
+Usage: unmap [options]
 
 Options:
   -p, --path <p>    input map file
