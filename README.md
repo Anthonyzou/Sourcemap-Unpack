@@ -9,8 +9,8 @@ Install by running `npm i -g source-map-unpacker`
 Usage: unmap [options]
 
 Options:
-  -p, --path <p>    input map file
-  -f, --filter <f>  string to filter out files
-  -o, --output <o>  output folder
-  -h, --help        output usage information
+  -p, --path <p>    input source map file
+  -f, --filter <f>  filter out file names
+  -o, --output <o>  output folder (default: "./")
+  -h, --help        display help for command
 ```

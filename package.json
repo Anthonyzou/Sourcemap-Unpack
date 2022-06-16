@@ -1,10 +1,13 @@
 {
   "name": "source-map-unpacker",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "",
   "main": "unmap.js",
   "bin": {
     "unpack": "unmap.js"
+  },
+  "engines": {
+    "node": ">10"
   },
   "scripts": {
     "test": "node . -p test/gistfile1.js.map  -o out"
