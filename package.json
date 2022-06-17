@@ -1,6 +1,6 @@
 {
   "name": "source-map-unpacker",
-  "version": "1.5.3",
+  "version": "1.5.5",
   "description": "",
   "main": "unmap.js",
   "bin": {

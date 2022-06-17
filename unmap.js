@@ -15,7 +15,12 @@ const opts = program
 
 fs.readFile(opts.path)
   .catch(async (e) => {
-    console.log("Input file does not exists");
+    if (e.errno == -13) {
+      console.log("Insufficient permissions to read the tnput file.");
+    }
+    if (e.errno == -2) {
+      console.log("Input file does not exists.");
+    }
     process.exit(1);
   })
   .then((js) => {
