@@ -1,22 +1,25 @@
 #!/usr/bin/env node
 
-const fs = require("fs-extra");
-const { resolve } = require("path");
-const { Command } = require("commander");
+import fs from "fs-extra";
+import filenamify from "filenamify";
+import os from "os";
+import { resolve } from "path";
+import { Command } from "commander";
 const program = new Command();
+const isWindows = os.platform() == "win32";
 
 const opts = program
   .name("unmap")
-  .requiredOption("-p, --path <p>", "input source map file")
-  .option("-f, --filter <f>", "filter out file names")
-  .option("-o, --output <o>", "output folder", "./")
+  .requiredOption("-p, --path <p>", "Input source map file")
+  .option("-f, --filter <f>", "Filter out file names")
+  .option("-o, --output <o>", "Output folder", "./")
   .parse(process.argv)
   .opts();
 
 fs.readFile(opts.path)
   .catch(async (e) => {
     if (e.errno == -13) {
-      console.log("Insufficient permissions to read the tnput file.");
+      console.log("Insufficient permissions to read the input file.");
     }
     if (e.errno == -2) {
       console.log("Input file does not exists.");
@@ -29,7 +32,10 @@ fs.readFile(opts.path)
     const files = js.sources
       .filter((path) => (opts.filter ? path.includes(opts.filter) : true))
       .map((path, idx) => {
-        const outpath = resolve(opts.output, path);
+        const outpath = resolve(
+          opts.output,
+          isWindows ? filenamify(path) : path
+        );
         return fs.outputFile(outpath, js.sourcesContent[idx]);
       });
     return Promise.all(files);
